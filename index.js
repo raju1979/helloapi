@@ -13,7 +13,7 @@ const vehicleRoute = require("./routes/vehicle");
 const app = express();
 
 //enable cors
-app(cors());
+app.use(cors());
 
 //configure app for body-bodyParser
 app.use(bodyParser.urlencoded({extended:true}));
