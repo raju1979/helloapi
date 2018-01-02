@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+var cors = require('cors')
 
 //import mongoose models
 const Vehicle = require('./models/vehicle');
@@ -10,6 +11,9 @@ const vehicleRoute = require("./routes/vehicle");
 
 
 const app = express();
+
+//enable cors
+app(cors());
 
 //configure app for body-bodyParser
 app.use(bodyParser.urlencoded({extended:true}));
