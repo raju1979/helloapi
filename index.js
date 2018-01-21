@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const morgan = require('morgan');
 var cors = require('cors')
 
 //import mongoose models
@@ -14,6 +15,7 @@ const app = express();
 
 //enable cors
 app.use(cors());
+app.use(morgan('dev'));
 
 //configure app for body-bodyParser
 app.use(bodyParser.urlencoded({extended:true}));
